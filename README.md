@@ -1,36 +1,147 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🚀 Next.js Practice App
 
-## Getting Started
+A feature-rich, full-stack-ready web application built with **Next.js 14 (App Router)**, showcasing modern web development patterns, multi-layout architecture, dynamic routing, and best practices in React ecosystem.
 
-First, run the development server:
+🌐 **Live Demo:** [next-js-practice-app-two.vercel.app](https://next-js-practice-app-two.vercel.app/)
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| **Next.js 14** | React framework with App Router |
+| **React** | UI library & client components |
+| **Tailwind CSS** | Utility-first CSS styling |
+| **DaisyUI** | Tailwind component library |
+| **React Icons** | Icon library |
+| **Context API** | Global state & data sharing |
+| **Vercel** | Deployment & hosting |
+
+
+---
+
+## ✨ Features & Concepts
+
+### 🗂️ Multi-Layout Architecture
+- **Root Layout** (`layout.js`) — wraps the entire application with global navigation, footer, and providers.
+- **Dashboard Layout** — a separate layout for the dashboard route group `(dashboard)`, isolated from the main layout.
+- **Nested Layouts** — blog detail pages use their own scoped layout inside `[blogId]/layout.jsx`.
+
+### 🔀 Routing
+- **Route Groups** — `(dashboard)` and `(main)` used to organize routes without affecting URL structure.
+- **Nested Routing** — deeply nested pages like `/blogs/[blogId]` with their own layouts.
+- **Dynamic Routing** — `[blogId]` segment enables dynamic blog post pages with unique URLs.
+
+### 🖼️ Image Optimization
+- Uses Next.js `<Image />` component for automatic optimization, lazy loading, and responsive sizing.
+- **Remote Image Imports** — configured `next.config.js` to allow images from external domains.
+
+### 🔗 Linking & Navigation
+- Uses Next.js `<Link />` component for client-side navigation without full page reloads.
+- Active link highlighting and programmatic navigation with `useRouter`.
+
+### 📦 Context API
+- Global context created in the `/context` folder.
+- Used to **fetch data once** and **share it across components** — e.g., blog posts consumed by multiple pages/components without prop drilling.
+
+### 🧩 Client Components
+- Selective use of `"use client"` directive for interactive components.
+- Clear separation between **Server Components** (default, for data fetching & SEO) and **Client Components** (for interactivity, state, and browser APIs).
+
+### 🏷️ Metadata & SEO
+- Page-level `metadata` exports for dynamic `<title>`, `<meta description>`, and Open Graph tags.
+- Improves SEO and link sharing across all routes.
+
+### 🚫 Custom Not Found Page
+- `not-found.jsx` provides a branded, styled 404 experience instead of the default Next.js fallback.
+
+### 🎨 UI & Styling
+- **Tailwind CSS** for rapid, responsive utility-first styling.
+- **DaisyUI** component classes for pre-built, theme-able UI elements (cards, buttons, navbar, badges, etc.).
+- **React Icons** for scalable, consistent iconography throughout the app.
+
+---
+
+## 📄 Pages
+
+| Route | Description |
+|---|---|
+| `/` | Home — hero, features, testimonials, pricing |
+| `/about` | About page |
+| `/blogs` | Blog listing page |
+| `/blogs/[blogId]` | Individual blog post (dynamic) |
+| `/contact` | Contact page |
+| `/dashboard` | Dashboard with its own layout |
+| `*` | Custom 404 Not Found page |
+
+---
+
+## 🚀 Getting Started
 
 ```bash
+# Clone the repository
+git clone <your-repo-url>
+cd <project-folder>
+
+# Install dependencies
+npm install
+
+# Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ⚙️ Key Configuration
 
-## Learn More
+**`next.config.js`** — Remote image domains are whitelisted here to allow `<Image />` to load external sources:
 
-To learn more about Next.js, take a look at the following resources:
+```js
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'your-image-domain.com',
+      },
+    ],
+  },
+};
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📚 Concepts Practiced
 
-## Deploy on Vercel
+- ✅ Next.js 14 App Router
+- ✅ File-based routing
+- ✅ Route groups with `(groupName)`
+- ✅ Nested & dynamic routing
+- ✅ Multi-layout system
+- ✅ Server vs Client Components
+- ✅ Context API for global state
+- ✅ Next.js `<Image />` optimization
+- ✅ Remote image imports
+- ✅ `<Link />` navigation
+- ✅ Page metadata & SEO
+- ✅ Custom 404 page
+- ✅ Tailwind CSS + DaisyUI
+- ✅ React Icons
+- ✅ Deployment on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🙌 Acknowledgements
+
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [DaisyUI](https://daisyui.com/)
+- [React Icons](https://react-icons.github.io/react-icons/)
+- [Vercel](https://vercel.com/)
+
+---
+
+> Built as a hands-on learning project to explore Next.js App Router patterns and modern React architecture. 🎯
