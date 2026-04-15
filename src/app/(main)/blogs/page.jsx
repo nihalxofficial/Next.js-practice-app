@@ -24,6 +24,8 @@ import {
   HiOutlineSortDescending
 } from "react-icons/hi";
 
+
+
 const BlogsPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");

@@ -17,6 +17,11 @@ import {
   HiOutlinePaperAirplane
 } from "react-icons/hi";
 
+export const metadata = {
+  title: "Contact page",
+  description: "This is Contact page",
+};
+
 const ContactPage = () => {
   const contactInfo = [
     {

@@ -21,6 +21,11 @@ import {
   HiOutlineUserGroup
 } from "react-icons/hi";
 
+export const metadata = {
+  title: "About page",
+  description: "This is About page",
+};
+
 const AboutPage = () => {
   const stats = [
     { label: "Happy Clients", value: "10K+", icon: HiOutlineUsers, color: "from-blue-500 to-cyan-500" },

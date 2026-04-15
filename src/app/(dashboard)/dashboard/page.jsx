@@ -20,6 +20,7 @@ import {
 import { useContext, useState } from "react";
 // import { postContext } from "@/app/context/postContext";
 
+
 const Sidebar = () => {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -55,6 +56,8 @@ const Sidebar = () => {
 
   // const posts = useContext(postContext)
   // console.log(posts);
+
+  
 
   return (
     <>

@@ -16,6 +16,11 @@ import {
   HiOutlineLightBulb
 } from "react-icons/hi";
 
+export const metadata = {
+  title: "Not Found ",
+  description: "This is 404 page",
+};
+
 const NotFoundPage = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [randomFloatingNumbers, setRandomFloatingNumbers] = useState([]);
