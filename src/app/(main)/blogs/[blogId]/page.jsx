@@ -23,10 +23,6 @@ import {
   HiOutlineShare
 } from "react-icons/hi";
 
-export const metadata = {
-  title: "Blog Details ",
-  description: "This is Blog Details page",
-};
 
 const SingleBlogPage = () => {
   const { blogId } = useParams();
