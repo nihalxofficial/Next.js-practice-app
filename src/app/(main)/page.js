@@ -105,7 +105,7 @@ const HomePage = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 text-primary text-sm font-medium mb-6 backdrop-blur-sm animate-bounce">
               <HiSparkles className="w-4 h-4" />
-              <span>✨ Limited Time Offer - Save 50%</span>
+              <span>✨ Limited Time Offer - Save 70%</span>
             </div>
             
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
